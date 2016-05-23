@@ -12,8 +12,8 @@ describe('login page',function() {
     it('UAT-LO-1 : should check if the registered user with a email id is able to login successfully', function () {
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
-        login.email.sendKeys('divya.gupta@tajawal.com');
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
+        login.email.sendKeys('divya.gupta@xyz.com');
         login.password.sendKeys('abc@123');
         login.loginbutton.click();
         browser.waitForAngular();
@@ -24,8 +24,8 @@ describe('login page',function() {
     it("UAT-LO-2 : Login Unsuccessful, email not registered", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
-        login.email.sendKeys('di.gupta@tajawal.com');
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
+        login.email.sendKeys('di.gupta@xyz.com');
         login.password.sendKeys('abc@123');
         login.loginbutton.click();
        // expect(element(By.css('p[ng-show="form.email.$error.email && submitted"]')).getInnerHtml()).toContain("Please enter a valid email.");
@@ -34,7 +34,7 @@ describe('login page',function() {
     it("UAT-LO-3 : Login Unsuccessful, incorrect email", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         login.email.sendKeys('aaa');
         login.password.sendKeys('aaa');
         login.loginbutton.click();
@@ -44,8 +44,8 @@ describe('login page',function() {
     it("UAT-LO-4 : Login Unsuccessful, incorrect email password combination", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
-        login.email.sendKeys('divya.gupta@tajawal.com');
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
+        login.email.sendKeys('divya.gupta@xyz.com');
         login.password.sendKeys('aaa');
         login.loginbutton.click();
        // expect(element(By.css('p[ng-show="form.email.$error.email && submitted"]')).getInnerHtml()).toContain("This password is not correct.");
@@ -54,7 +54,7 @@ describe('login page',function() {
     it("UAT-LO-5 : Login Unsuccessful, blank fields", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-       // expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+       // expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         login.loginbutton.click();
         //expect(element(By.css('p[ng-show="form.email.$error.required && form.password.$error.required && submitted"]')).getInnerHtml()).toContain("Please enter your email and password.");
     });
@@ -62,9 +62,9 @@ describe('login page',function() {
     it("UAT-LO-6 : Login Redirect to Signup", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        //expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        //expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         login.createacc.click();
-        //expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/signup");
+        //expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/signup");
         expect(element(By.model('user.name')).isPresent()).toBe(true);
     });
 
@@ -72,7 +72,7 @@ describe('login page',function() {
     it("UAT-LO-7 : Login Forgot my password", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : Login Forgot my password");
         login.forgotPassword.click();
         console.log("to be tested once implemented");
@@ -82,7 +82,7 @@ describe('login page',function() {
     it('UAT-LO-8 : should login using FB connect', function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : should login using FB connect");
         login.facebook.click();
         console.log("to be tested once implemented");
@@ -92,7 +92,7 @@ describe('login page',function() {
     it('UAT-LO-9 : Login Unsuccessful , when facebook account is revoked  ', function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : Login Unsuccessful , when facebook account is revoked");
         login.facebook.click();
         console.log("to be tested once implemented");
@@ -102,7 +102,7 @@ describe('login page',function() {
     it('UAT-LO-10 : should login using Google+ connect', function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : should login using Google+ connect");
         login.google.click();
         console.log("to be tested once implemented");
@@ -112,7 +112,7 @@ describe('login page',function() {
     it('UAT-LO-11 : Login Unsuccessful , when Google+ account is revoked  ', function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : Login Unsuccessful , when Google+ account is revoked");
         login.google.click();
         console.log("to be tested once implemented");
@@ -122,7 +122,7 @@ describe('login page',function() {
     it('UAT-LO-12 : should login using Twitter connect', function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : should login using Twitter connect");
         login.twitter.click();
         console.log("to be tested once implemented");
@@ -132,7 +132,7 @@ describe('login page',function() {
     it('UAT-LO-13 : Login Unsuccessful , when Twitter account is revoked  ', function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending("failed test : Login Unsuccessful , when Twitter account is revoked");
         login.twitter.click();
         console.log("to be tested once implemented");
@@ -142,7 +142,7 @@ describe('login page',function() {
     it("UAT-LO-14 : Login Error handling in case of unsuccessful login attempt via FB, twitter, G+", function(){
         login.userloginicononhome.click();
         login.signInonHeader.click();
-        expect(browser.getCurrentUrl()).toContain("http://www-dev.tajawal.com/login");
+        expect(browser.getCurrentUrl()).toContain("http://www-dev.xyz.com/login");
         pending('Force Skip FB, G+, twitter connect functionality not fully implemented on the tested build');
         console.log("to be tested once implemented");
     });
@@ -165,9 +165,9 @@ describe('login page',function() {
     });
 
     it("UAT-LO-18 : Login Go back to home", function(){
-        browser.get("http://tjwlweb:tjwlwebpassword@www-dev.tajawal.com/login");
-        login.tajawallogo.click();
-        expect(browser.getCurrentUrl()).toEqual("http://www-dev.tajawal.com/");
+        browser.get("http://tjwlweb:tjwlwebpassword@www-dev.xyz.com/login");
+        login.xyzlogo.click();
+        expect(browser.getCurrentUrl()).toEqual("http://www-dev.xyz.com/");
     });
 
     it("LO1 : Verify the email field on the Sign In page and its length ",function(){
@@ -201,14 +201,14 @@ describe('login page',function() {
     });
 
     it("LO8 : Verify the header across pages contain language selector, Currency selector and Login options",function(){
-        expect(login.tajawallogo.isPresent()).toBe(true);
+        expect(login.xyzlogo.isPresent()).toBe(true);
         expect(login.currencyselector.isPresent()).toBe(true);
         expect(login.langselector.isPresent()).toBe(true);
         expect(login.userloginicononhome.isPresent()).toBe(true);
     });
 
     //todo
-    it("LO9 : Verify the footer across pages contain tajawal logo, About, FAQ, TnC and other details, email subscrption ",function(){
+    it("LO9 : Verify the footer across pages contain xyz logo, About, FAQ, TnC and other details, email subscrption ",function(){
         pending("to be tested once implemented");
     });
 
