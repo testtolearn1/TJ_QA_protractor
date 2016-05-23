@@ -1,5 +1,5 @@
 {
-  "name": "tajawal-qa",
+  "name": "qa",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "protractor-html-screenshot-reporter": "0.0.16",
     "grunt-concurrent": "^0.5.0"
   },
-  "description": "tajawal QA application",
+  "description": " QA application",
   "main": "app.js",
   "directories": {
     "test": "tests"
