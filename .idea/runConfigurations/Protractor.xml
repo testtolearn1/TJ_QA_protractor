@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Protractor" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$/tests">
     <envs>
-      <env name="DEBUG" value="tajawal-QA:*" />
+      <env name="DEBUG" value="xyz-QA:*" />
     </envs>
     <browser url="http://localhost:3000/" />
     <method />
