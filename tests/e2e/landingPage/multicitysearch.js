@@ -1,5 +1,5 @@
 var LandingPage = require('./landingPage.po.js');
-//var webdriver = require('/Users/divyagupta/Workspace/tajawal-QA/node_modules/protractor/node_modules/selenium-webdriver');
+//var webdriver = require('/Users/divyagupta/Workspace/xyz-QA/node_modules/protractor/node_modules/selenium-webdriver');
 
 /* This is landing page browser testing */
 
