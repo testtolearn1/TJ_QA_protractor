@@ -1,5 +1,5 @@
-var link = require('/Users/divyagupta/Workspace/tajawal-QA_protractor/tests/links.js');
-var webdriver = require('/Users/divyagupta/Workspace/tajawal-QA_protractor/node_modules/protractor/node_modules/selenium-webdriver');
+var link = require('/Users/divyagupta/Workspace/xyz-QA_protractor/tests/links.js');
+var webdriver = require('/Users/divyagupta/Workspace/xyz-QA_protractor/node_modules/protractor/node_modules/selenium-webdriver');
 
 var LandingPage = function () {
 
